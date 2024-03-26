@@ -11,9 +11,7 @@ const app = express();
 
 app.use(express.json());
 
-app.use(cors(function (req, callback) {
-    callback(null, { origin: true });
-}));
+app.use(cors());
 
 app.assistantId = await init(process.env.OPENAI_API_KEY, "uploads/file.docx");
 app.files = {};
