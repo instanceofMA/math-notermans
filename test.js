@@ -4,12 +4,12 @@ const rl = readline.createInterface({
     output: process.stdout,
 });
 
-const URL = "https://math-notermans-production.up.railway.app";
+const URL = "https://math-notermans.up.railway.app";
 const postJson = { method: "POST", headers: { "Content-Type": "application/json" } };
 
 try {
     // Checking if the API is live.
-    await fetch(URL).then(r => r.text())
+    await fetch(URL).then(r => r.json())
     .then(logAndReturn);
 
     // Creating a new thread.
