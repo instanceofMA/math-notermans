@@ -1,6 +1,7 @@
 import express from "express";
 import { aiRouter, init } from "./ai.js";
 import dotenv from "dotenv";
+import cors from "cors";
 
 // Pulling from .env
 dotenv.config();
